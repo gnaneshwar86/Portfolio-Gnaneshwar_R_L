@@ -38,7 +38,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <SocialProfileJsonLd
           type="Person"
           name="Gnaneshwar R L"
-          url="https://gnaneshwar.dev/"
+          url="https://gnaneshwar.me/"
           sameAs={[
             "https://linkedin.com/in/gnaneshwar86",
             "https://github.com/gnaneshwar86",

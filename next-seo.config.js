@@ -2,10 +2,10 @@ const defaultSEOConfig = {
   title: "Gnaneshwar R L",
   description:
     "Full Stack Developer • DevOps Enthusiast • Problem Solver • Tech Enthusiast",
-  cannonical: "https://gnaneshwar.dev/",
+  cannonical: "https://gnaneshwar.me/",
   openGraph: {
     type: "website",
-    url: "https://gnaneshwar.dev/",
+    url: "https://gnaneshwar.me/",
     site_name: "Gnaneshwar R L",
     title: "Gnaneshwar R L | Fullstack Developer",
     description:

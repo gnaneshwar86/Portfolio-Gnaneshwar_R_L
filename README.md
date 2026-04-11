@@ -1,43 +1,54 @@
-# My Portfolio Site 🚀
-This is my portfolio site built with [Next.js](https://nextjs.org), [TailwindCSS](https://tailwindcss.com), [Contentlayer](https://www.contentlayer.dev/), and has been deploy on [Vercel](https://vercel.com).
+# Gnaneshwar R L — Portfolio 🚀
 
-It is currently a simple portfolio site with a project showcase and a blog posts showcase. I plan on making it a complete blogfolio in the future but the blog part is WIP as of now.
+Welcome to my personal portfolio and academic showcase! This is a high-performance, minimalist blogfolio designed to showcase my projects, achievements, and technical expertise.
 
-## Screenshots
-**Home Page**
+Built with a focus on speed, clean typography, and a "Pro-Slate" aesthetic.
 
-![image](https://user-images.githubusercontent.com/63192115/172039448-8a79e500-0819-4e99-a653-471174661606.png)
+## ✨ Key Features
+- **Project Case Studies**: Detailed walkthroughs of my work with live demos and source links.
+- **Command Palette**: Fully functional `cmd+k` / `ctrl+k` menu for lightning-fast navigation.
+- **Dynamic Contact System**: Integrated contact form with real-time validation and backend API.
+- **MDX Support**: Content-driven architecture using Contentlayer for projects and blogs.
+- **Aesthetic UI**: Smooth Framer Motion animations, glassmorphism, and responsive design.
+
+## 🛠️ Tech Stack
+- **Framework**: [Next.js](https://nextjs.org) (Pages Router)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com)
+- **Content**: [Contentlayer](https://www.contentlayer.dev/) & [MDX](https://mdxjs.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Deployment**: [Vercel](https://vercel.com)
+
+## 📸 Preview
+The portfolio features a sleek dark mode interface with curated typography (Inter & Outfit) and harmonized color palettes.
+
+- **Home Page**: A comprehensive overview of my identity, latest projects, and skills.
+- **Command Bar**: Immediate access to any part of the site with keyboard shortcuts (`h`, `p`, `a`, `c`, `r`).
+- **Project Detail**: Rich MDX-powered documentation for every creation.
+
+## 🚀 Getting Started
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/gnaneshwar86/Portfolio-Gnaneshwar_R_L.git
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Run development server**:
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**:
+   ```bash
+   npm run build
+   ```
+
+## 📬 Contact
+Found an issue or want to collaborate? Feel free to reach out via the [Contact Page](https://gnaneshwar.me/contact) or open an issue on GitHub!
 
 ---
-
-**Command Bar**
-
-![image](https://user-images.githubusercontent.com/63192115/172039508-16ffbcc3-ab92-4e9c-a1e1-ea6e0cd50686.png)
-
----
-
-**All Projects**
-
-![image](https://user-images.githubusercontent.com/63192115/172039453-af995e3d-1b27-4246-b4c1-99acec3c5e7f.png)
-
----
-
-**A single project**
-
-![image](https://user-images.githubusercontent.com/63192115/172039474-12354f77-1c82-4d72-ab03-e26e6df9d276.png)
-
----
-
-**All blog posts**
-
-![image](https://user-images.githubusercontent.com/63192115/172039459-28acc7c3-cab4-4c31-8fc8-dc7febd6f707.png)
-
----
-
-**Guestbook**
-
-![image](https://user-images.githubusercontent.com/63192115/172039464-c008cb2f-4f13-44cd-b06e-71eb479ea5a5.png)
-
-
-## Contributing
-Found some issue with the website? Please open a issue or a pull request!
+Made with ❤️ by [Gnaneshwar R L](https://github.com/gnaneshwar86)
