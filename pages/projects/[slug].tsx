@@ -6,7 +6,6 @@ import { allProjects, Project } from ".contentlayer/generated";
 import IconFactory from "@/components/Shared/Icons/IconFactory";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import MDXComponents from "@/components/Common/MDXComponents";
-import CustomGiscus from "@/components/Shared/CustomGiscus";
 import { getGitHubOwnerAndRepoFromLink } from "@/utils/helpers";
 import { GitHubLogo } from "@/components/Shared/Icons";
 import getPreviewImageUrl from "@/utils/getPreviewImageURL";

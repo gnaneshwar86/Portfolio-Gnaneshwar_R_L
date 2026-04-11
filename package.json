@@ -1,11 +1,11 @@
 {
-  "name": "portfolio-svelte",
-  "version": "0.0.1",
+  "name": "gnaneshwar-portfolio",
+  "version": "1.0.0",
   "license": "GPL-3.0",
   "scripts": {
     "prepare": "husky install",
     "dev": "next dev",
-    "prebuild": "yarn gen:hashnode",
+    "prebuild": "npm run gen:hashnode",
     "build": "next build",
     "start": "next start",
     "lint": "eslint '{components,pages,utils,data,layouts}/**/*.{js,jsx,ts,tsx}'",
