@@ -11,6 +11,9 @@ interface IBreadcrumb {
   isCurrent: boolean;
 }
 
+import AvatarJPG from "public/static/images/avatar.jpg";
+import NextImage from "next/image";
+
 const Breadcrumb = (): JSX.Element => {
   const { asPath } = useRouter();
   const [breadcrumbs, setBreadcrumbs] = useState<IBreadcrumb[]>([]);
@@ -36,9 +39,16 @@ const Breadcrumb = (): JSX.Element => {
   }, [asPath]);
 
   return (
-    <ol aria-label="breadcrumb" className="flex space-x-2">
+    <ol aria-label="breadcrumb" className="flex items-center space-x-2">
       <BreadcrumbItem href="/" isRoot>
-        ~
+        <div className="relative h-6 w-6 overflow-hidden rounded-full border border-tertiary">
+          <NextImage
+            src={AvatarJPG}
+            layout="fill"
+            placeholder="blur"
+            alt="Gnaneshwar R L"
+          />
+        </div>
       </BreadcrumbItem>
       {breadcrumbs &&
         breadcrumbs.map(({ href, label, isCurrent }) => (
