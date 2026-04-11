@@ -111,7 +111,7 @@ const ContactPage = () => {
             initial="hidden" animate="visible"
             className="md:col-span-2"
           >
-            <AnimatePresence mode="wait">
+            <AnimatePresence exitBeforeEnter>
               {isDone ? (
                 <motion.div 
                   initial={{ opacity: 0, scale: 0.9 }}

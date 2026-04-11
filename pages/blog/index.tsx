@@ -1,6 +1,6 @@
 import { GetStaticProps, NextPage } from "next";
 
-import hashnodeData from "@/data/hashnode.json";
+import hashnodeData from "../../hashnode.json";
 import BlogPostCard from "@/components/Blog/BlogPostCard";
 import getPreviewImageUrl from "@/utils/getPreviewImageURL";
 import { HashnodePostWithPlaceHolderImage } from "types/hashnode";

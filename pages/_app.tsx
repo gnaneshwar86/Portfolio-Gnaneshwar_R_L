@@ -17,11 +17,14 @@ import { DefaultSeo, SocialProfileJsonLd } from "next-seo";
 import SEO from "../next-seo.config";
 import Script from "next/script";
 
+import { TooltipProvider } from "@radix-ui/react-tooltip";
+
 export default function MyApp({ Component, pageProps }: AppProps) {
   const { isEnabled } = useCircles();
 
   return (
-    <div className="relative min-h-screen overflow-x-hidden">
+    <TooltipProvider>
+      <div className="relative min-h-screen overflow-x-hidden">
       <Header />
       <KProvider>
         <NextNProgress
@@ -71,5 +74,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <CommandBarInvoker />
       </KProvider>
     </div>
+    </TooltipProvider>
   );
 }
