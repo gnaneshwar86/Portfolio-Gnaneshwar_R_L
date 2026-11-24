@@ -170,7 +170,7 @@ const ResumePage: NextPage = () => {
               <ExperienceEntry
                 title="Product Development Intern"
                 company="Digihutglobal"
-                dates="June 2026 - Present"
+                dates="June 2026 – Present"
                 points={[
                   "Developed workflows for consolidating scanner findings, prioritizing security risks, and generating actionable dashboards and reports.",
                   "Supported platform reliability through testing, bug fixes, secure access controls, and Docker-based deployment workflows.",
@@ -179,12 +179,20 @@ const ResumePage: NextPage = () => {
               <ExperienceEntry
                 title="Software Development Engineer (SDE) Intern"
                 company="Bluestock Fintech"
-                dates="March 2026 - April 2026"
+                dates="March 2026 – April 2026"
                 points={[
                   "Worked on software development tasks and backend application features in a fintech environment, gaining hands-on experience in real-world software engineering workflows.",
                 ]}
               />
             </div>
+            <NextLink href="/experience">
+              <a className="group mt-6 inline-flex items-center gap-2 text-sm font-medium text-accent hover:text-white">
+                View Experience Page
+                <span className="transition duration-200 group-hover:translate-x-1" aria-hidden="true">
+                  →
+                </span>
+              </a>
+            </NextLink>
           </motion.section>
 
           {/* ── PROJECTS ── */}

@@ -58,6 +58,14 @@ const KProvider = ({ children }: KProviderProps): JSX.Element => {
       icon: <Mail />,
     },
     {
+      id: "experience-page",
+      name: "Experience",
+      keywords: "experience work career internship employment",
+      perform: () => push("/experience"),
+      section: "Pages",
+      icon: <Briefcase />,
+    },
+    {
       id: "achievements-page",
       name: "Achievements",
       keywords: "achievements",
