@@ -114,9 +114,11 @@ const ResumePage: NextPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
                 { title: "Programming Languages", content: "Java, C++, Python, JavaScript, SQL" },
-                { title: "Backend & API Development", content: "Spring Boot, RESTful APIs, Microservices Architecture" },
+                { title: "Backend Development", content: "Spring Boot, Flask, RESTful APIs, Node.js" },
+                { title: "Frontend Development", content: "React.js, HTML5, CSS3" },
                 { title: "Databases", content: "MySQL, DBMS Concepts" },
-                { title: "Cloud Platforms & Tools", content: "AWS (EC2), Docker, CI/CD, Git, GitHub, Linux" },
+                { title: "AI/ML Fundamentals", content: "NumPy, Pandas, PyTorch, Data Preprocessing" },
+                { title: "Cloud Platforms & Tools", content: "AWS, Docker, CI/CD, Git, GitHub, Linux" },
               ].map((s, i) => (
                 <SkillCard key={i} title={s.title} content={s.content} />
               ))}
@@ -129,8 +131,6 @@ const ResumePage: NextPage = () => {
                     "Software Engineering Principles",
                     "System Design",
                     "Query Optimization",
-                    "Operating Systems",
-                    "Clean Coding Practices",
                   ].map(skill => (
                     <span
                       key={skill}
@@ -159,67 +159,87 @@ const ResumePage: NextPage = () => {
               <p className="text-[0.95rem] font-medium text-gray-300">
                 Bachelor of Engineering – Computer Science and Engineering
               </p>
-              <p className="text-[0.9rem] font-bold mt-2 text-accent">CGPA: 8.44</p>
+              <p className="text-[0.9rem] font-bold mt-2 text-accent">CGPA: 8.47</p>
+            </div>
+          </motion.section>
+
+          {/* ── EXPERIENCE ── */}
+          <motion.section variants={fadeUp} custom={5} className="mb-12">
+            <SectionHeading>Experience</SectionHeading>
+            <div className="flex flex-col space-y-6">
+              <ExperienceEntry
+                title="Product Development Intern"
+                company="Digihutglobal"
+                dates="June 2026 - Present"
+                points={[
+                  "Developed workflows for consolidating scanner findings, prioritizing security risks, and generating actionable dashboards and reports.",
+                  "Supported platform reliability through testing, bug fixes, secure access controls, and Docker-based deployment workflows.",
+                ]}
+              />
+              <ExperienceEntry
+                title="Software Development Engineer (SDE) Intern"
+                company="Bluestock Fintech"
+                dates="March 2026 - April 2026"
+                points={[
+                  "Worked on software development tasks and backend application features in a fintech environment, gaining hands-on experience in real-world software engineering workflows.",
+                ]}
+              />
             </div>
           </motion.section>
 
           {/* ── PROJECTS ── */}
-          <motion.section variants={fadeUp} custom={5} className="mb-12">
+          <motion.section variants={fadeUp} custom={6} className="mb-12">
             <SectionHeading>Projects</SectionHeading>
             <div className="flex flex-col space-y-8">
               <ProjectEntry
                 title="EventMate – Full-Stack College Event Management System"
                 tech="React.js, Spring Boot, MySQL, Material UI"
                 points={[
-                  "Designed and developed scalable software solutions using Spring Boot and MySQL for product management and transactional systems in a microservices-style architecture.",
-                  "Implemented API development best practices, query optimization, pagination, and caching to improve system performance.",
-                  "Developed production-ready features including JWT-based authentication, role-based access control, and containerized deployment using Docker on AWS EC2.",
-                  "Wrote and tested backend modules following clean coding practices to ensure reliability and maintainability.",
+                  "Designed and developed scalable backend solutions using Spring Boot and MySQL in a microservices-style architecture.",
+                  "Implemented REST APIs, query optimization, pagination, and JWT-based authentication to improve system performance and security.",
+                  "Deployed containerized applications using Docker on AWS EC2 while following clean coding and testing practices.",
                 ]}
                 githubLink="https://github.com/gnaneshwar86/EventMate-CollegeEventManagementSystem"
                 liveLink="https://eventmate-eta.vercel.app/"
               />
               <ProjectEntry
-                title="GKart – Full-Stack Online Grocery Platform"
-                tech="React.js, Spring Boot, MySQL, Material UI"
+                title="AI-Powered Plant Disease Detection System"
+                tech="Python, PyTorch, EfficientNet, Flask, Pandas, NumPy"
                 points={[
-                  "Designed and developed scalable backend systems using Spring Boot and MySQL for product management and transactional workflows.",
-                  "Implemented REST APIs, pagination, caching, and query optimization to improve performance and ensure efficient database interactions.",
-                  "Built production-ready features including JWT authentication and role-based access control.",
-                  "Containerized and deployed the application using Docker on AWS EC2.",
+                  "Developed an end-to-end deep learning application to classify plant leaf images into 39 disease categories using EfficientNet transfer learning.",
+                  "Built and optimized the machine learning pipeline, including preprocessing, data augmentation, training, validation, evaluation, and inference.",
+                  "Created a Flask-based application for real-time image uploads and diagnosis, displaying confidence scores, top-k predictions, and disease-specific recommendations.",
                 ]}
-                githubLink="https://github.com/gnaneshwar86/GKart"
               />
               <ProjectEntry
-                title="Sign Language Recognition System"
-                tech="Python, TensorFlow, OpenCV, Deep Learning"
+                title="GKart - Grocery E-Commerce Platform"
+                tech="React.js, Spring Boot, MySQL, Tailwind CSS, REST APIs"
                 points={[
-                  "Designed a deep learning-based video classification pipeline for ASL gesture recognition using structured frame extraction and spatiotemporal modeling.",
-                  "Achieved high validation accuracy through transfer learning with a pretrained I3D model on a large-scale ASL dataset (~2000 gesture classes).",
-                  "Implemented frame extraction and spatiotemporal feature modeling to enable accurate gesture classification with real-time inference potential.",
+                  "Developed a full-stack grocery e-commerce application with secure user authentication, product management, shopping cart, and order processing.",
+                  "Built responsive user and admin dashboards with CRUD operations, role-based access control, and frontend-backend integration.",
+                  "Used Spring Data JPA, RESTful services, and reusable React components to create a maintainable application.",
                 ]}
-                githubLink="https://github.com/gnaneshwar86/Sign-Language-Recognition-App"
+                githubLink="https://github.com/gnaneshwar86/GKart"
               />
             </div>
           </motion.section>
 
           {/* ── ACHIEVEMENTS ── */}
-          <motion.section variants={fadeUp} custom={6} className="mb-12">
+          <motion.section variants={fadeUp} custom={7} className="mb-12">
             <SectionHeading>Achievements</SectionHeading>
             <ul className="list-disc list-outside ml-5 space-y-2 text-[0.95rem] text-gray-300">
-              <li>Solved <strong className="text-white">200+ Data Structures and Algorithms</strong> problems on LeetCode, strengthening algorithmic thinking and coding efficiency.</li>
+              <li>Solved <strong className="text-white">300+ Data Structures and Algorithms</strong> problems on LeetCode, strengthening problem-solving and coding efficiency.</li>
+              <li>Finalist - <strong className="text-white">TechMCode 2026 Hackathon</strong>, recognized for developing an innovative solution in a competitive national-level hackathon.</li>
               <li>Qualified for the <strong className="text-white">Inter-College Round of SAP Hackfest 2025</strong>.</li>
               <li>Selected as a <strong className="text-white">College-Level Qualifier for Smart India Hackathon (SIH) 2024</strong>.</li>
               <li>Participated in <strong className="text-white">IDEATHON at SKCET</strong>.</li>
-              <li>Deployed multiple mini-projects using Git-based version control workflows, gaining practical exposure to CI/CD fundamentals and structured development practices.</li>
-              <li>Collaborated with cross-functional teams during hackathons, demonstrating strong problem-solving skills and clear technical communication.</li>
             </ul>
           </motion.section>
 
           {/* ── PDF VIEWER ── */}
           <motion.div
             variants={fadeUp}
-            custom={7}
+            custom={8}
             className="mt-4 rounded-xl overflow-hidden border border-gray-700"
             style={{ boxShadow: "0 10px 30px rgba(0,0,0,0.5)" }}
           >
@@ -267,6 +287,33 @@ const SkillCard = ({ title, content }: { title: string; content: string }) => (
   <div className="rounded-xl border border-gray-700 bg-secondary/50 p-5">
     <h4 className="font-bold text-white mb-2">{title}</h4>
     <p className="text-gray-400 text-sm">{content}</p>
+  </div>
+);
+
+const ExperienceEntry = ({
+  title,
+  company,
+  dates,
+  points,
+}: {
+  title: string;
+  company: string;
+  dates: string;
+  points: string[];
+}) => (
+  <div className="rounded-xl border border-gray-700 bg-secondary/50 p-6">
+    <div className="mb-3 flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between">
+      <div>
+        <h4 className="text-[1.05rem] font-bold text-white">{title}</h4>
+        <p className="text-sm font-medium text-accent">{company}</p>
+      </div>
+      <span className="text-sm text-gray-400">{dates}</span>
+    </div>
+    <ul className="list-disc list-outside ml-4 space-y-1.5 text-sm text-gray-300">
+      {points.map((point, index) => (
+        <li key={index}>{point}</li>
+      ))}
+    </ul>
   </div>
 );
 

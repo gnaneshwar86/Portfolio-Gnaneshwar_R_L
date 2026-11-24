@@ -6,16 +6,28 @@ const skillCategories = [
     skills: ["Java", "C++", "Python", "JavaScript", "SQL"],
   },
   {
-    title: "Backend & API Development",
-    skills: ["Spring Boot", "RESTful APIs", "Microservices Architecture"],
+    title: "Backend Development",
+    skills: ["Spring Boot", "Flask", "RESTful APIs", "Node.js"],
   },
   {
-    title: "Databases & Tools",
-    skills: ["MySQL", "Docker", "AWS (EC2)", "Git/GitHub"],
+    title: "Frontend Development",
+    skills: ["React.js", "HTML5", "CSS3"],
+  },
+  {
+    title: "Databases",
+    skills: ["MySQL", "DBMS Concepts"],
+  },
+  {
+    title: "AI/ML Fundamentals",
+    skills: ["NumPy", "Pandas", "PyTorch", "Data Preprocessing"],
+  },
+  {
+    title: "Cloud & Tools",
+    skills: ["AWS", "Docker", "CI/CD", "Git", "GitHub", "Linux"],
   },
   {
     title: "Core Concepts",
-    skills: ["DSA", "OOP", "System Design", "Query Optimization"],
+    skills: ["DSA", "OOP", "Software Engineering", "System Design", "Query Optimization"],
   },
 ];
 
@@ -23,7 +35,7 @@ const Skills = (): JSX.Element => {
   return (
     <div className="my-16 flex flex-col">
       <h2 className="mb-8 text-3xl font-bold text-gray-100">Skills & Tech Stack</h2>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
         {skillCategories.map((category, idx) => (
           <div
             key={idx}

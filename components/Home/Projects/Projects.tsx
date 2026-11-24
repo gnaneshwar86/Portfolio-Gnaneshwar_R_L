@@ -4,12 +4,17 @@ import Link from "@/components/Shared/Link";
 import { ArrowRight, ExternalLink } from "react-feather";
 import NextImage from "next/image";
 
+const featuredProjectSlugs = ["EventMate", "AIPlantDiseaseDetection", "GKart"];
+const featuredProjects = featuredProjectSlugs
+  .map(slug => allProjects.find(project => project.slug === slug))
+  .filter((project): project is (typeof allProjects)[number] => project !== undefined);
+
 const Projects = (): JSX.Element => {
   return (
     <div className="my-16 flex flex-col">
       <h2 className="mb-8 text-3xl font-bold">Projects</h2>
       <div className="flex flex-col space-y-8">
-        {allProjects.slice(0, 3).map((project, index) => (
+        {featuredProjects.map(project => (
           <div
             key={project._id}
             className="group relative rounded-xl border-[1px] border-tertiary bg-secondary/50 p-4 transition duration-200 hover:border-accent md:hover:scale-[1.01]"

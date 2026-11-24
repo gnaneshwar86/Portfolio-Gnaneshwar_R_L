@@ -69,6 +69,8 @@ const IconFactory = ({
       return <UserCheck {...otherProps} />;
     case "eventmate":
       return <Calendar {...otherProps} />;
+    case "plantdisease":
+      return <Activity {...otherProps} />;
     default:
       return <X />;
   }

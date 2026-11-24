@@ -31,14 +31,16 @@ const SkillPage: NextPage<ProjectPageProps> = ({
           url: `https://gnaneshwar.me/projects/${project.slug}`,
           title: `${project.name} | Gnaneshwar`,
           description: project.description,
-          images: [
-            {
-              url: project.image.url,
-              width: project.image.width,
-              height: project.image.height,
-              alt: project.name,
-            },
-          ],
+          images: project.image?.url
+            ? [
+                {
+                  url: project.image.url,
+                  width: project.image.width,
+                  height: project.image.height,
+                  alt: project.name,
+                },
+              ]
+            : [],
         }}
       />
       <div className="mt-8 flex items-center space-x-8">
@@ -86,18 +88,24 @@ const SkillPage: NextPage<ProjectPageProps> = ({
         )}
       </div>
 
-      <div className="mt-16 overflow-hidden rounded-2xl border-[1px] border-tertiary p-0 shadow-md">
-        <NextImage
-          width={project.image.width}
-          height={project.image.height}
-          src={project.image.url}
-          placeholder="blur"
-          blurDataURL={projectImagePreview}
-          alt={project.name}
-          priority
-          unoptimized={!project.image.url.startsWith("http")}
-        />
-      </div>
+      {project.image?.url ? (
+        <div className="mt-16 overflow-hidden rounded-2xl border-[1px] border-tertiary p-0 shadow-md">
+          <NextImage
+            width={project.image.width}
+            height={project.image.height}
+            src={project.image.url}
+            placeholder="blur"
+            blurDataURL={projectImagePreview}
+            alt={project.name}
+            priority
+            unoptimized={!project.image.url.startsWith("http")}
+          />
+        </div>
+      ) : (
+        <div className="mt-16 flex h-64 items-center justify-center overflow-hidden rounded-2xl border-[1px] border-tertiary bg-secondary/50 shadow-md">
+          <IconFactory name={project.iconName} className="h-24 w-24 text-accent" />
+        </div>
+      )}
 
       <article>
         <div className="prose my-12 max-w-full leading-8">
@@ -118,7 +126,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       };
     }
 
-    const projectImagePreview = await getPreviewImageUrl(project.image.url);
+    const projectImagePreview = project.image?.url
+      ? await getPreviewImageUrl(project.image.url)
+      : "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
 
     return {
       props: {

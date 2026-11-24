@@ -4,15 +4,17 @@ import { cleanLink, getGitHubOwnerAndRepoFromLink } from "@/utils/helpers";
 import Link from "@/components/Shared/Link";
 import { CloudinaryImage } from "contentlayer/generated";
 import { GitHubLogo } from "@/components/Shared/Icons";
+import IconFactory from "@/components/Shared/Icons/IconFactory";
 import { forwardRef } from "react";
 
 interface ProjectProps {
   slug: string;
   name: string;
   description: string;
-  link: string;
-  githubLink: string;
-  image: CloudinaryImage;
+  link?: string;
+  githubLink?: string;
+  image?: CloudinaryImage;
+  iconName: string;
   placeholderImage: string;
 }
 
@@ -25,6 +27,7 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectProps>(
       image,
       link,
       githubLink,
+      iconName,
       placeholderImage,
     }: ProjectProps,
     ref
@@ -37,15 +40,24 @@ const ProjectCard = forwardRef<HTMLDivElement, ProjectProps>(
         <div className="flex shrink-0 overflow-hidden rounded-lg md:w-72">
           <Link href={`/projects/${slug}`} className="w-full">
             <div className="relative h-40 w-full bg-secondary transition duration-200 hover:opacity-60 md:h-full">
-              <NextImage
-                src={image.url}
-                alt={name}
-                className="rounded-xl object-cover"
-                layout="fill"
-                placeholder="blur"
-                blurDataURL={placeholderImage}
-                unoptimized={!image.url.startsWith("http")}
-              />
+              {image?.url ? (
+                <NextImage
+                  src={image.url}
+                  alt={name}
+                  className="rounded-xl object-cover"
+                  layout="fill"
+                  placeholder="blur"
+                  blurDataURL={placeholderImage}
+                  unoptimized={!image.url.startsWith("http")}
+                />
+              ) : (
+                <div className="flex h-full w-full items-center justify-center">
+                  <IconFactory
+                    name={iconName}
+                    className="h-16 w-16 rounded-xl bg-tertiary p-3 text-accent"
+                  />
+                </div>
+              )}
             </div>
           </Link>
         </div>

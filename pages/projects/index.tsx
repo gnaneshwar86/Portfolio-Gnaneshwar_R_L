@@ -34,6 +34,7 @@ const ProjectsPage: NextPage<ProjectsPageProps> = ({
             description={project.description}
             link={project.link}
             githubLink={project.githubLink}
+            iconName={project.iconName}
             slug={project.slug}
             image={project.image}
             placeholderImage={project.placeholderImage}
