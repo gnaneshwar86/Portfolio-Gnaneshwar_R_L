@@ -1,6 +1,5 @@
 import Socials from "@/components/Shared/Socials";
 import NextImage from "next/image";
-import AvatarJPG from "public/static/images/avatar.jpg";
 
 const Hero = (): JSX.Element => {
   return (
@@ -22,7 +21,7 @@ const Hero = (): JSX.Element => {
       </div>
       <div className="will-change-opacity relative h-32 w-32 overflow-hidden rounded-full will-change-transform">
         <NextImage
-          src={AvatarJPG}
+          src="/static/images/avatar.png"
           layout="fill"
           placeholder="blur"
           alt="Gnaneshwar R L"

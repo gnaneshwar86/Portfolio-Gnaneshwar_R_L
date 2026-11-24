@@ -11,7 +11,6 @@ interface IBreadcrumb {
   isCurrent: boolean;
 }
 
-import AvatarJPG from "public/static/images/avatar.jpg";
 import NextImage from "next/image";
 
 const Breadcrumb = (): JSX.Element => {
@@ -43,7 +42,7 @@ const Breadcrumb = (): JSX.Element => {
       <BreadcrumbItem href="/" isRoot>
         <div className="relative h-6 w-6 overflow-hidden rounded-full border border-tertiary">
           <NextImage
-            src={AvatarJPG}
+            src="/static/images/avatar.png"
             layout="fill"
             placeholder="blur"
             alt="Gnaneshwar R L"
